@@ -1,0 +1,111 @@
+.board {
+  position: relative;
+  padding: 10px 15px;
+  background: #11674d;
+  color: #fff;
+  cursor: pointer;
+  width: 250px;
+  height: 100px;
+  display: inline-block;
+  border-radius: 3px;
+  vertical-align: middle;
+}
+
+.board-container {
+  position: relative;
+  width: 250px;
+  height: 100px;
+  margin: 0px 10px 10px 0px;
+  display: inline-block;
+}
+
+.task-board {
+  margin: 0 15px;
+}
+
+.close-board {
+  position: absolute;
+  right: 10px;
+  display: none;
+  cursor: pointer;
+  z-index: 99;
+  top: 0;
+}
+
+.close-board:hover {
+  display: block;
+}
+
+.close-board img {
+  width: 10px;
+  height: 10px;
+}
+
+.board.create-board {
+  padding: 0px;
+  background: #eee;
+  color: #333;
+  cursor: pointer;
+}
+
+.create-board-padding {
+  padding: 26px 0;
+  text-align: center;
+  font-size: 18px;
+}
+
+.create-board-form {
+  position: absolute;
+  background: #fff;
+  width: 100%;
+  border: 1px solid #eee;
+  padding: 15px;
+}
+
+.create-board-form .form-control {
+  height: 34px;
+  font-size: 14px;
+}
+
+.btn {
+  margin-top: 10px;
+  float: right;
+  padding: 6px 12px;
+  font-size: 14px;
+}
+
+h2 {
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.board-container:hover .close-board {
+  display: block;
+}
+
+.close-board:hover {
+  display: block;
+}
+
+
+.btn-default {
+  margin-top: 10px;
+  float: right;
+}
+
+.btn-default.green {
+  background: #11674d;
+  color: #fff;
+  box-shadow: none;
+  margin-left: 10px;
+  border-color: transparent;
+}
+
+.btn-default:active:focus,
+.btn-default:active:hover,
+.btn:focus {
+  color: #333;
+  background-color: #d4d4d4;
+  border-color: #8c8c8c;
+  box-shadow: none;
+}

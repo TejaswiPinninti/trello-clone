@@ -1,0 +1,27 @@
+<div class="container-fuild">
+  <div class="col-md-12">
+    <h2>Task Boards</h2>
+  </div>
+  <div class="row task-board" *ngIf="taskBoard">
+    <div *ngFor="let task of taskBoard">
+      <div class="board-container">
+        <span class="close-board" (click)="deleteTask(task._id)"><img src="src/cancel-music.svg"></span>
+        <div class="board" [routerLink]="['/tasks']" (click)=getListDetails(task._id)>
+          <div>{{task.board_name}}</div>
+        </div>
+      </div>
+    </div>
+    <div class="board create-board">
+      <div class="create-board-padding" (click)="createForm()">
+        <span>Create new board</span>
+      </div>
+      <div class="create-board-form" *ngIf="formEdit">
+        <form novalidate>
+          <input type="text" class="form-control" name="board_name" placeholder="Board name" [(ngModel)]="model.board_name" />
+          <button type="submit" class="btn btn-default green" (click)="createNewBoard();">Save</button>
+          <button type="button" class="btn btn-default" (click)="createForm()">Cancel</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

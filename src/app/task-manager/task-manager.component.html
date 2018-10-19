@@ -1,0 +1,50 @@
+<section class="task-list-container">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <h3 class="board-name">{{boardName}}</h3>
+        <div class="list-card" *ngFor='let task of newTasksList;'>
+          <div>
+            <input type="text" [(ngModel)]='task.list_name' (change)='updateListName(task._id,task.list_name)' />
+            <p *ngIf='updateError'>{{updateErrorMsg}}</p>
+            <div class="btn-group actions list-actions">
+              <button type="button" class="dropdown-toggle" data-toggle="dropdown">...</button>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" (click)='deleteList(tasks.board_id,task._id)'>Delete List</a>
+              </div>
+            </div>
+          </div>
+          <div *ngFor="let subTask of task.tasks">
+            <div class="task-item">
+              <h4> {{ subTask.task_name }} </h4>
+            </div>
+          </div>
+          <div class="task-item new-card edit-dialog selected-card">
+            <div class='display-card'>
+              <div class="edit-task">
+                <textarea [(ngModel)]='taskName' name="taskName" class="form-control" class="form-control"></textarea>
+                <button class="btn btn-default green save-card" (click)='createTask(taskName, task._id)'>Save</button>
+                <button class="btn btn-default cancel-card">Cancel</button>
+                <div class="clear"></div>
+              </div>
+            </div>
+          </div>
+          <a class="add-card" appTaskBoard>Add a task</a>
+        </div>
+        <div class="list-card create-list-card" [ngClass]="{'create-open':showCreateLists}">
+          <a (click)='showCreateLists=true'>Create a new list..</a>
+          <div class='create-list' *ngIf='showCreateLists'>
+            <form (submit)='createList(listName,tasks.board_id)'>
+              <input type="text" [(ngModel)]='listName' name="listname" class="form-control">
+              <p *ngIf='updateError'>{{updateErrorMsg}}</p>
+              <button type="submit" class="btn btn-default green">Save</button>
+              <button type="button" class="btn btn-default" (click)='hideCreateList()'>Cancel</button>
+              <div class="clear"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="overlay"></div>
+</section>

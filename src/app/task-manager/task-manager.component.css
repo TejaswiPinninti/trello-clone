@@ -1,0 +1,230 @@
+.task-item {
+  background: #fff;
+  padding: 2px 15px 15px 10px;
+  border-radius: 3px;
+  margin-bottom: 8px;
+  position: relative;
+}
+
+.task-item h4 {
+  font-size: 14px;
+  border: none;
+  margin-top: 5px;
+  text-transform: capitalize;
+}
+
+.list-card .task-item.new-card {
+  padding: 10px;
+  display: none;
+  background: rgba(255, 255, 255, 0.64);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.display-card {
+  display: flex;
+}
+
+.task-item .selected-card,
+.task-item.selected-card {
+  position: relative;
+  z-index: 999;
+}
+
+.add-card {
+  color: #666;
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.dropdown-toggle {
+  background: none;
+  border: none;
+}
+
+.dropdown-toggle::after {
+  display: none;
+}
+
+.task-list-container .board-name {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 600;
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
+.list-card.create-list-card {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.list-card {
+  margin-top: 20px;
+  background: #e2e4e6;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 20px;
+  width: 280px;
+  padding: 10px;
+  border-radius: 3px;
+  line-height: 18px;
+}
+
+.task-list-container {
+  background: rgba(17, 103, 77, 0.9);
+  min-height: 100vh;
+}
+
+.list-card>div>input[type=text]:focus {
+  padding: 8px 12px;
+  background: #fff;
+  border-color: #ccc;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1) !important;
+  width: 90%;
+}
+
+.list-card .list-actions {
+  float: right;
+  cursor: pointer;
+  margin-top: -6px;
+}
+
+.list-card a {
+  color: #666;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.list-card.create-list-card {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.list-card.create-list-card a {
+  color: rgba(255, 255, 255, 0.48);
+}
+
+.list-card.create-list-card .form-control:focus {
+  border: none;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1) !important;
+}
+
+.list-card.create-list-card.create-open {
+  background: #e2e4e6;
+}
+
+.list-card.create-list-card.create-open a {
+  color: #666;
+}
+
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  display: none;
+  z-index: 11;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.dnd-sortable-drag {
+  -webkit-transform: scale(0.9);
+  transform: scale(0.9);
+  opacity: 0.7;
+  border: 1px dashed #000;
+}
+
+.edit-task-name {
+  position: relative;
+}
+
+.edit-task-name .close-btn {
+  position: absolute;
+  right: -100px;
+  top: 2px;
+  background: #c33e3e;
+  color: #fff;
+  padding: 2px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.list-card>div>input[type=text] {
+  font-size: 16px;
+  margin-top: 0px;
+  font-weight: 600;
+  border: none;
+  background: none;
+  margin-bottom: 15px;
+  cursor: pointer;
+  text-transform: capitalize;
+  color: #333 !important;
+}
+
+form>input.form-control {
+  height: 34px;
+  font-size: 14px;
+}
+
+.btn-default {
+  margin-top: 10px;
+  float: right;
+  color: #333;
+  background-color: #fff;
+  border-color: #ccc;
+}
+
+.btn-default.green {
+  background: #11674d;
+  color: #fff;
+  box-shadow: none;
+  margin-left: 10px;
+  border-color: transparent;
+}
+
+.btn-default:focus,
+.btn-default:hover,
+.btn:focus {
+  color: #333;
+  background-color: #d4d4d4;
+  border-color: #8c8c8c;
+  box-shadow: none;
+}
+
+.btn {
+  padding: 6px 12px;
+  font-size: 14px;
+}
+
+.list-actions button {
+  cursor: pointer;
+  outline: none;
+}
+
+.show>.dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  float: left;
+  min-width: 160px;
+  padding: 5px 0;
+  margin: 2px 0 0;
+  font-size: 14px;
+  text-align: left;
+  list-style: none;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, .15);
+  border-radius: 4px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+}
+
+p {
+  font-size: 14px;
+}
